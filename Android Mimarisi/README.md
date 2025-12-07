@@ -32,8 +32,7 @@ Android Framework, geliştiricilere hazır API'ler sunan, uygulamaların kulland
 - Örnek: LoginActivity, MainActivity, SettingsActivity
 
 ```xml
-<activity android:name=".AdminActivity" 
-          android:exported="true"/>
+<activity android:name=".AdminActivity" android:exported="true"/>
 ```
 
 #### Service
@@ -42,8 +41,7 @@ Android Framework, geliştiricilere hazır API'ler sunan, uygulamaların kulland
 - Örnek: Müzik çalar, dosya indirme, senkronizasyon
 
 ```xml
-<service android:name=".PaymentService"
-         android:exported="true"/>
+<service android:name=".PaymentService" android:exported="true"/>
 ```
 
 #### Broadcast Receiver
@@ -52,8 +50,7 @@ Android Framework, geliştiricilere hazır API'ler sunan, uygulamaların kulland
 
 
 ```xml
-<receiver android:name=".SmsReceiver"
-          android:exported="true"/>
+<receiver android:name=".SmsReceiver" android:exported="true"/>
 ```
 
 #### Content Provider
@@ -62,9 +59,7 @@ Android Framework, geliştiricilere hazır API'ler sunan, uygulamaların kulland
 - Örnek: Kişiler, medya dosyaları
 
 ```xml
-<provider android:name=".UserDataProvider"
-          android:exported="true"
-          android:authorities="com.app.users"/>
+<provider android:name=".UserDataProvider" android:exported="true" android:authorities="com.app.users"/>
 ```
 
 ### Intent Sistemi
