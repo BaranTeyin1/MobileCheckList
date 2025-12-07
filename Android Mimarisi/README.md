@@ -99,3 +99,12 @@ Uygulamalar bazen birbirleriyle iletişim kurmak zorunda. Android bunun için ko
 - Intent Sistemi
 - Content Provider
 - Shared User ID (Aynı İmza)
+
+# APK
+APK, Android uygulamalarının kurulum dosyasıdır. Aslında özel bir ZIP dosyasıdır
+
+AndroidManifest.xml: Component'ler, izinler
+classes.dex: Derlenmiş kod
+res/ & assets/: Kaynak dosyalar, config'ler
+lib/: Native kütüphaneler
+META-INF/: İmza bilgileri
