@@ -90,7 +90,7 @@ Debuggable uygulamalarda root olmadan uygulama verilerine erişebilirsin.
 
 Debuggable uygulamalar allowBackup="false" olsa bile backup alınabilir.
 
-# Exported Activity Nedir?
+# Exported Activity
 Exported Activity, başka uygulamalar tarafından başlatılabilen bir ekrandır. Aşağıdaki durumlarda activity exported olur.
 
 Android 11:
@@ -112,3 +112,44 @@ Android 12+:
 </activity>
 ```
 
+# Exported Service
+Servis türleri:
+- Started Service
+- Bound Service 
+- Foreground Service
+
+Manifest:
+```xml
+<service android:name=".MyService" android:exported="true"/>
+```
+
+# Exported Content Provider
+Content Provider, Android uygulamaları arasında veri paylaşımını sağlayan bir bileşendir. Veritabanı, dosya sistemi veya network üzerinden veri paylaşımı için kullanılır.
+
+Manifest Tanımı:
+```xml
+<provider android:name=".UserDataProvider" android:authorities="com.example.app.users" android:exported="true" android:grantUriPermissions="true" android:readPermission="com.example.app.permission.READ_USERS" android:writePermission="com.example.app.permission.WRITE_USERS"/>
+```
+
+# Custom Permissions & Protection Levels
+```xml
+<permission android:name="com.example.app.permission.READ_USER_DATA" android:label="@string/perm_read_users_label" android:description="@string/perm_read_users_desc" android:protectionLevel="signature"/>
+```
+
+## Protection Levels 
+1. normal:
+Düşük riskli izinler. Sistem otomatik verir, kullanıcı onayı gerektirmez.
+```xml
+<permission android:name="com.example.app.permission.VIEW_PUBLIC_DATA" android:protectionLevel="normal"/>
+```
+
+2. dangerous:
+Yüksek riskli izinler. Kullanıcı onayı gerekir (runtime permission).
+```xml
+<permission android:name="com.example.app.permission.ACCESS_SENSITIVE_DATA" android:protectionLevel="dangerous"/>
+```
+
+3. signature:
+```xml
+<permission android:name="com.example.app.permission.ADMIN_ACCESS" android:protectionLevel="signature"/>
+```
